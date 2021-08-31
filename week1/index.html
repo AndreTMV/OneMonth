@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Luis Miguel Likes You. And so do other people.</title>
+
+    <style>
+      /* Basic CSS comment */
+      body {
+        background: #bbb;
+        color: white;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 80px;
+        color: #333;
+      }
+    </style>
+    <div id="x"></div>
+
+    <script>
+      //alert("I'm annoying");
+      var username = prompt("Hello, who are you?");
+      var car = new Array("BMW", "Saab", "Maserati");
+      var randomNumber = Math.floor(Math.random() * car.length);
+      var bmw = document.createElement("img");
+      bmw.src = "bmw.png";
+      var saab = document.createElement("img");
+      saab.src = "Saab.jpg";
+      var maseratu = document.createElement("img");
+      maseratu.src = "maseratu.jpg";
+      if (username === "Andre") {
+        document.write(
+          "<h1>Hello " + username + " you won a " + car[randomNumber] + "!</h1>"
+        );
+        if (randomNumber === 0) {
+          var src = document.getElementById("x");
+          src.appendChild(bmw);
+        }
+        if (randomNumber === 1) {
+          var src = document.getElementById("x");
+          src.appendChild(saab);
+        }
+        if (randomNumber === 2) {
+          var src = document.getElementById("x");
+          src.appendChild(maseratu);
+        }
+      } else if (username == "Chris") {
+        document.write(
+          "<h1>Hello " + username + " you won a " + car[randomNumber] + "!</h1>"
+        );
+        if (randomNumber === 0) {
+          var src = document.getElementById("x");
+          src.appendChild(bmw);
+        }
+        if (randomNumber === 1) {
+          var src = document.getElementById("x");
+          src.appendChild(saab);
+        }
+        if (randomNumber === 2) {
+          var src = document.getElementById("x");
+          src.appendChild(maseratu);
+        }
+      } else {
+        document.write("<h1>Hello " + username + "!</h1>");
+      }
+    </script>
+  </head>
+
+  <body>
+    <img src="../LuisMi.jpg" alt="Luis Miguel" />
+  </body>
+</html>

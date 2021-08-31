@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tabletop.js</title>
+    <style type="text/css">
+      body {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script type="javascript" src="javascript/main.js"></script>
+    <script type="text/javascript">
+      var publicSpreadsheetUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSTjnamm-5X3f-9weHFexMwDA4rme-xq7fMexmKnbYLKBx9qqvbF6V8Us8-NcbREeZnn3joZcJ_Wvn4/pubhtml";
+      function init() {
+        Tabletop.init({
+          key: publicSpreadsheetUrl,
+          callback: showInfo,
+          simpleSheet: true,
+        });
+      }
+
+      function showInfo(data, tabletop) {
+        //alert("Successfully processed!");
+        //console.log(data);
+        data.forEach(function (data) {
+          console.log(data.Nombre);
+        });
+      }
+    </script>
+  </body>
+</html>

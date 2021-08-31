@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>classList, createElement() and appendChild()</title>
+  </head>
+  <body>
+    <div class="js-search-results"></div>
+  </body>
+  <script type="text/javascript">
+    var card = document.createElement("div");
+    card.classList.add("card");
+    var searchResults = document.querySelector(".js-search-results");
+    searchResults.appendChild(card);
+  </script>
+</html>

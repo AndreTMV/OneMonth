@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mr. JavaScript</title>
+  </head>
+  <body>
+    <h1>I'm Mr. Javascript</h1>
+    <a href="#" class="reset">Reset</a>
+    <a href="#" class="howareyou">Hey JavaScript, how ya feeling?</a>
+    <script type="text/javascript">
+      var reset = document.querySelector(".reset");
+      reset.addEventListener("click", function () {
+        var h1 = document.querySelector("h1");
+        h1.innerHTML = "I'm JavaScript";
+      });
+      var howareyou = document.querySelector(".howareyou");
+      howareyou.addEventListener("click", function () {
+        var h1 = document.querySelector("h1");
+        h1.innerHTML = "I'm alive!";
+      });
+    </script>
+  </body>
+</html>

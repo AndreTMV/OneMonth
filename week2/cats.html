@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript: Animation</title>
+    <style type="text/css">
+      #container {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        height: 500px;
+        width: 500px;
+        border: 3px solid #ccc;
+        background-color: #fff;
+      }
+
+      .box {
+        float: left;
+        width: 75px;
+        height: 100px;
+        margin: 10px;
+        background: #fff url("http://placekitten.com/g/75/100/") no-repeat;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <script>
+      var cat = document.getElementsByClassName(".box");
+      for (var i = 0; i < 20; i++) {
+        setTimeout(function () {
+          var cat = document.createElement("div");
+          cat.className = "box";
+          document.getElementById("container").appendChild(cat);
+        }, 500 * i);
+      }
+    </script>
+  </body>
+</html>

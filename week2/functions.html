@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1 id="result">Result:</h1>
+    <script type="text/javascript">
+      function Sum(a, b) {
+        var c = parseInt(a) + parseInt(b);
+        document.body.innerHTML = c;
+      }
+      function howManyLetters(string) {
+        var answer = string.length;
+        document.body.innerHTML = answer + "<br>";
+      }
+      var string = prompt("Your string:");
+      howManyLetters(string);
+      /*for loops*/
+      var beatles = ["Jhon", "Paul", "Ringo", "George"];
+      for (var i = 0; i < beatles.length; i++) {
+        document.write(beatles[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>
